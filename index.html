@@ -1,0 +1,90 @@
+<html>
+<head>
+ 
+<script>
+  
+    function btn_click(){
+        var check = document.getElementById("check");
+        if (check.checked == true){
+            if (document.getElementById('email').value=='example@gmail.com'){
+                if (document.getElementById('pass').value=='example'){
+                    window.location.href = "http://www.w3schools.com";
+                }
+                else{
+                    document.getElementById('text').innerText = "Email or password is already used"
+                    
+                }
+            } 
+            
+            else{
+                document.getElementById('text').innerText = "Email or password is already used"
+
+            }
+        }
+        else{
+            document.getElementById('text').innerText = "Please check Privacy Policy"
+        }
+
+
+}
+
+
+</script>  
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+
+<body>
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col'></div>
+            <div class='col'>
+                
+                <a style="font-size: x-large;">Sign Up</a>
+                <br>
+                <b id='text' style="color: red;"></b>
+                
+                <br>
+                <br>
+                
+                <p class="text-danger">Email</p>
+                <input class="form-control" type="text" id="email" placeholder="your Email address">
+                <br>
+                <br>
+                
+                <p class="text-danger">Password</p>
+                <input class="form-control" type="text" id="pass" placeholder="Password">
+                <br>
+                <br>
+
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="check">
+                    <label class="form-check-label" for="exampleCheck1">I agree to the Terms of Services and Privacy Policy</label>
+                </div>
+
+                <br>
+                
+
+                <button class='btn btn-danger btn-lg btn-block' onclick="btn_click()" style="background-color: rgb(241, 109, 109);">continue</button>
+
+            </div>
+            
+            <div class='col'></div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
